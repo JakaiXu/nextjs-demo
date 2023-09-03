@@ -1,7 +1,14 @@
 import React from "react";
 import { Fragment } from "react";
 import classes from "./MeetupDetail.module.css";
-const MeetupDetail = (props) => {
+interface MeetupProps {
+
+  title: string;
+  image: string;
+  address: string;
+  description: string;
+}
+const MeetupDetail = (props:MeetupProps) => {
   return (
     <section className={classes.detail}>
       <img className={classes.img} src={props.image} alt={props.title} />
